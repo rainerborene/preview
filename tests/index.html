@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Preview</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../preview.js"></script>
+    <script>
+      $(function() {
+        var preview = new Preview;
+        preview.attach('.screenshot a');
+        window.preview = preview;
+      });
+    </script>
+    <style>
+      body { padding: 50px; }
+
+      .screenshot { text-align: center; }
+      .screenshot a { display: none; }
+      .screenshot a:first-child { display: block; }
+
+      .preview-overlay, .preview-container { position: absolute; top: 0; left: 0; display: none; }
+      .preview-overlay { background: #ccc; opacity: 0.8; }
+      .preview-container { text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div class="slide">
+      <img src="http://25.media.tumblr.com/tumblr_mdbt1n6DUK1rk5y7uo1_1280.png" width="923" height="1920" style="display: none" />
+      <div class="screenshot">
+        <a href="#preview">
+          <img src="http://25.media.tumblr.com/tumblr_mdbt1n6DUK1rk5y7uo1_1280.png" width="923" height="1920" />
+        </a>
+        <a href="#preview">
+          <img src="http://25.media.tumblr.com/tumblr_mdbt1n6DUK1rk5y7uo2_1280.png" width="1010" height="1170" />
+        </a>
+        <a href="#preview">
+          <img src="http://24.media.tumblr.com/tumblr_mdbt1n6DUK1rk5y7uo3_1280.png" width="1010" height="900" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
