@@ -7,9 +7,7 @@
     <script src="../preview.js"></script>
     <script>
       $(function() {
-        var preview = new Preview;
-        preview.attach('.screenshot a');
-        window.preview = preview;
+        window.preview = new Preview().bind('.screenshot a');
       });
     </script>
     <style>

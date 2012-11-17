@@ -8,24 +8,29 @@ Light-weight lightbox for jQuery. Kinda Quick Look for images.
 
 ```js
 var preview = new Preview;
-
-preview.attach('.screenshot a');
-preview.attach(...);
+preview.bind('.screenshot a');
 ```
+
+You might want to use [animate.css](http://daneden.me/animate/), which is great
+for emphasis, home pages, sliders, and general just-add-water-awesomeness
 
 ## API
 
-### Preview#attach(selector)
+### Preview#bind(selector)
 
 Bind `click` event of `selector` to open preview.
 
+### Preview#effects(open, close)
+
+Add `css` classes when opening or closing the preview window.
+
 ### Preview#open
 
-Open preview lightbox.
+Open preview.
 
 ### Preview#close
 
-Close preview lightbox.
+Close preview.
 
 ## License
 
